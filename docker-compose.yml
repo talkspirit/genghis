@@ -1,0 +1,9 @@
+mongo:
+  image: mongo:3.0.7
+  expose:
+    - 27017:27017
+
+genghis:
+  build: build/
+  ports:
+    - 8082:8082

@@ -1,0 +1,8 @@
+ServerName localhost
+
+<Virtualhost *>
+    ServerName localhost
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule (.*) /var/www/genghis/genghis.php [L,QSA]
+</Virtualhost>
