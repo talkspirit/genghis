@@ -1,6 +1,15 @@
 FROM ubuntu:15.10
 MAINTAINER Olivier RICARD <olivier+genghis@talkspirit.com>
 
+ARG BUILD_DATE
+ARG VCS_REF
+
+LABEL co.vidsy.build-date=$BUILD_DATE \
+      co.vidsy.name="genghis"         \
+      co.vidsy.vcs-ref=$VCS_REF       \
+      co.vidsy.vcs-type="Git"         \
+      co.vidsy.vcs-url="https://github.com/talkspirit/genghis"
+
 #Setup container environment parameters
 ENV DEBIAN_FRONTEND noninteractive
 
